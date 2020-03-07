@@ -1,6 +1,6 @@
 {
   "name": "quering-date",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parse date values to return a interval, to be used in queries with dates.",
   "main": "index.js",
   "scripts": {
