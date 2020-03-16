@@ -18,13 +18,10 @@ const processQueryDate = query => {
   const now = new Date();
   const { _day, _month, _year, _months, _days } = query;
 
-  const day = _day || 1;
-  const month = _month || now.getMonth() + 1;
-  const year = _year
-    ? _year > 2000
-      ? _year
-      : 2000 + _year
-    : now.getFullYear();
+  const day = _day ? parseInt(_day) : 1;
+  const month = _month ? parseInt(_month) : now.getMonth() + 1;
+  const y = _year ? parseInt(_year) : now.getFullYear();
+  const year = y > 2000 ? y : 2000 + y;
 
   const start = new Date(`${year}-${month}-${day}`);
   const end = new Date(start);
